@@ -66,12 +66,13 @@ h6 {
 
 :root {
   --color-blue: rgb(25, 146, 212);
+  --color-lightblue: rgba(25, 146, 212, 0.5);
   --color-white: rgb(255, 255, 255);
   --color-background: rgb(226, 232, 240);
   --color-gray: rgb(99, 99, 99);
   --color-black: rgb(0, 0, 0);
   --color-shadow: rgba(0, 0, 0, 0.2);
-  --color-orange: rgb(240, 180, 41);
+  --color-accent: rgb(250, 165, 110);
 }
 
 body {
@@ -133,6 +134,10 @@ ul {
     padding-left: 1rem;
     font-weight: bold;
     font-size: 1.3rem;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: var(--color-accent);
+    }
   }
 }
 
@@ -154,6 +159,10 @@ header {
     width: auto;
     vertical-align: sub;
     padding-right: 0.5rem;
+    transition: 0.3s ease-in;
+    &:hover {
+      filter: contrast(0.1) drop-shadow(0 0 2px var(--color-accent));
+    }
   }
   & input {
     height: 2rem;
@@ -194,6 +203,10 @@ header {
 .username {
   font-size: 1.4rem;
   color: var(--color-blue);
+  transition: 0.3s ease-in-out;
+  &:hover {
+    color: var(--color-lightblue);
+  }
 }
 
 .left-header {
@@ -209,6 +222,12 @@ header {
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(2, 1fr);
+  & a {
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: var(--color-lightblue);
+    }
+  }
 }
 
 .profile-title {
@@ -242,6 +261,11 @@ button {
   font-weight: bold;
   color: var(--color-white);
   background-color: var(--color-blue);
+  transition: 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--color-lightblue);
+  }
 }
 
 main {
@@ -284,6 +308,10 @@ main {
   & img[type="image/svg+xml"] {
     height: 1.5rem;
     padding: 0 0.5rem;
+    transition: 0.3s ease-in;
+    &:hover {
+      filter: contrast(0) drop-shadow(0 0 2px var(--color-accent));
+    }
   }
 }
 
@@ -294,7 +322,13 @@ main {
   height: 94.8%;
 
   & article {
-    border-left: 5px solid var(--color-orange);
+    border-left: 5px solid var(--color-accent);
+    & a {
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
   }
 }
 
@@ -335,13 +369,17 @@ main {
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2.5fr;
     column-gap: 0.5rem;
     & a {
       font-size: 0.875rem;
       align-self: end;
       color: var(--color-blue);
       font-weight: bold;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: var(--color-lightblue);
+      }
     }
     & h6 {
       font-size: 0.875rem;
@@ -350,6 +388,7 @@ main {
     }
     & img {
       grid-row: 1 / -1;
+      justify-self: center;
     }
   }
 }
