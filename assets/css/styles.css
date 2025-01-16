@@ -269,7 +269,7 @@ button {
 }
 
 main {
-  padding: 2rem 2rem 4rem;
+  padding: 2rem 2rem 3rem;
   grid-column: 2 / -1;
   background-color: var(--color-background);
   display: grid;
